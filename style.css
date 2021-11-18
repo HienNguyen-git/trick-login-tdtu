@@ -1,0 +1,97 @@
+:root {
+  --dark-light-blue-bg-color: rgb(39, 81, 95);
+  --light-blue-bg-color: lightblue;
+  --red-bg-color: #d9534f;
+  --white-text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  overflow: hidden;
+  background-color: var(--dark-light-blue-bg-color);
+  margin: 0;
+}
+
+.container {
+  background-color: transparent;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--white-text-color);
+  font-weight: 700;
+  width: 25%;
+  min-width: 370px;
+}
+
+.container header {
+  text-align: center;
+}
+
+.container .input-field {
+  margin: 50px 0px;
+  position: relative;
+}
+
+.container input {
+  background-color: var(--dark-light-blue-bg-color);
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+  color: var(--white-text-color);
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.container input:focus {
+  outline: none;
+  border-color: var(--light-blue-bg-color);
+}
+
+
+.container label {
+  position: absolute;
+  transition: transform 1s ease;
+  left: 0;
+  top: -10px;
+}
+
+.container label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container input:focus + label span,
+.container input:valid + label span {
+  transform: translateY(-15px);
+  color: var(--light-blue-bg-color);
+}
+
+.container .register a {
+  color: var(--light-blue-bg-color);
+}
+
+.container .btn {
+  margin: 30px 0;
+  width: 100%;
+  font-family: inherit;
+  padding: 15px;
+  color: var(--dark-light-blue-bg-color);
+  font-size: larger;
+  font-weight: 900;
+  border-radius: 5px;
+  border: 0;
+}
+
+.container .btn:active {
+  transform: scale(0.98);
+  background-color: var(--light-blue-bg-color);
+}
